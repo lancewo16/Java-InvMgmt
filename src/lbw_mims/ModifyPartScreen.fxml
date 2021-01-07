@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lbw_mims.ModifyPartScreenController">
+   <children>
+      <HBox layoutX="39.0" layoutY="14.0" prefHeight="49.0" prefWidth="594.0" spacing="5.0">
+         <children>
+            <Label text="MIMS">
+               <font>
+                  <Font name="Copperplate" size="48.0" />
+               </font>
+            </Label>
+            <Label text="Manufacturing Inventory Management System">
+               <font>
+                  <Font name="Copperplate" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="439.0" layoutY="399.0" prefHeight="49.0" prefWidth="194.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#userClicksOnSaveButton" prefHeight="27.0" prefWidth="90.0" text="Save" />
+            <Button mnemonicParsing="false" onAction="#userClicksOnCancelButton" prefHeight="27.0" prefWidth="90.0" text="Cancel" />
+         </children>
+      </HBox>
+      <HBox layoutX="89.0" layoutY="76.0" prefHeight="49.0" prefWidth="424.0">
+         <children>
+            <Label text="Modify part">
+               <font>
+                  <Font name="Copperplate Bold" size="25.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="inHouseRadioButton" mnemonicParsing="false" onAction="#userClicksOnRadioButton" text="In-House">
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="outsourcedRadioButton" mnemonicParsing="false" onAction="#userClicksOnRadioButton" text="Outsourced">
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+      </HBox>
+      <VBox layoutX="16.0" layoutY="119.0" prefHeight="271.0" prefWidth="603.0">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="566.0">
+               <children>
+                  <Label text="ID">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="partIDTextField" prefWidth="150.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="83.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="566.0">
+               <children>
+                  <Label text="Name">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="partNameTextField" alignment="BASELINE_CENTER" prefWidth="150.0" promptText="Part Name">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="63.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="19.0" prefWidth="566.0">
+               <children>
+                  <Label text="Inventory">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="partInventoryTextField" alignment="BASELINE_CENTER" prefWidth="150.0" promptText="Inv">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="15.0" prefWidth="566.0">
+               <children>
+                  <Label text="Cost">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="partCostTextField" alignment="BASELINE_CENTER" prefWidth="150.0" promptText="Cost">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="64.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="566.0">
+               <children>
+                  <Label text="Minimum">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="partMinimumTextField" alignment="BASELINE_CENTER" prefHeight="27.0" prefWidth="150.0" promptText="Min">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefWidth="80.0" text="Maximum">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="partMaximumTextField" alignment="BASELINE_CENTER" prefHeight="27.0" prefWidth="150.0" promptText="Max">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="566.0">
+               <children>
+                  <Label fx:id="partCompanyMachineLabel" text="Company Name">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="partCompanyMachineTextField" alignment="BASELINE_CENTER" prefWidth="150.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="1.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

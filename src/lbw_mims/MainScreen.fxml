@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lbw_mims.MainScreenController">
+   <children>
+      <HBox layoutX="29.0" layoutY="12.0" prefHeight="49.0" prefWidth="589.0" spacing="5.0">
+         <children>
+            <Label text="MIMS">
+               <font>
+                  <Font name="Copperplate" size="48.0" />
+               </font>
+            </Label>
+            <Label text="Manufacturing Inventory Management System">
+               <font>
+                  <Font name="Copperplate" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutY="74.0" text="Parts">
+         <font>
+            <Font name="Copperplate Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <HBox alignment="BOTTOM_LEFT" layoutX="12.0" layoutY="101.0" prefHeight="41.0" prefWidth="333.0">
+         <children>
+            <TextField fx:id="partSearchTextField" prefWidth="200.0" promptText="Search Part">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></TextField>
+            <Button mnemonicParsing="false" onAction="#userClicksOnPartSearchButton" prefHeight="27.0" prefWidth="125.0" text="Search">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="29.0" layoutY="142.0" prefHeight="150.0" prefWidth="483.0">
+         <children>
+            <TableView fx:id="partSearchTableView" onContextMenuRequested="#userClicksOnPartSearchTableView" onSort="#userClicksOnPartSearchTableView" prefHeight="130.0" prefWidth="478.0">
+               <columns>
+                  <TableColumn fx:id="colPartID" prefWidth="110.0" text="Part ID" />
+                  <TableColumn fx:id="colPartName" prefWidth="110.0" text="Part Name" />
+                  <TableColumn fx:id="colPartInventory" prefWidth="110.0" text="Inventory " />
+                  <TableColumn fx:id="colPartCost" prefWidth="150.0" text="Cost/unit" />
+               </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+      <Label layoutX="525.0" layoutY="72.0" text="Products">
+         <font>
+            <Font name="Copperplate Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Label>
+      <HBox alignment="TOP_RIGHT" layoutX="29.0" layoutY="292.0" prefHeight="41.0" prefWidth="396.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#userClicksOnPartAddButton" prefHeight="27.0" prefWidth="125.0" text="Add">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="partModifyButton" mnemonicParsing="false" onAction="#userClicksOnPartModifyButton" prefHeight="27.0" prefWidth="125.0" text="Modify">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="partDeleteButton" mnemonicParsing="false" onAction="#userClicksOnPartDeleteButton" prefHeight="27.0" prefWidth="125.0" text="Delete">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="544.0" layoutY="107.0" prefHeight="41.0" prefWidth="333.0">
+         <children>
+            <TextField fx:id="productSearchTextField" prefHeight="27.0" prefWidth="200.0" promptText="Search Product" />
+            <Button mnemonicParsing="false" onAction="#userClicksOnProductSearchButton" prefHeight="27.0" prefWidth="125.0" text="Search">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox fx:id="productTableView" layoutX="544.0" layoutY="142.0" prefHeight="150.0" prefWidth="483.0">
+         <children>
+            <TableView fx:id="productSearchTableView" onSort="#userClicksOnProductSearchTableView" prefHeight="130.0" prefWidth="478.0">
+               <columns>
+                  <TableColumn fx:id="colProductID" prefWidth="110.0" text="Product ID" />
+                  <TableColumn fx:id="colProductName" prefWidth="110.0" text="Product Name" />
+                  <TableColumn fx:id="colProductInventory" prefWidth="110.0" text="Inventory " />
+                  <TableColumn fx:id="colProductPrice" prefWidth="150.0" text="Price/Unit" />
+               </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" layoutX="544.0" layoutY="292.0" prefHeight="48.0" prefWidth="396.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#userClicksOnProductAddButton" prefHeight="27.0" prefWidth="125.0" text="Add">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="productModifyButton" mnemonicParsing="false" onAction="#userClicksOnProductModifyButton" prefHeight="27.0" prefWidth="125.0" text="Modify">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="productDeleteButton" mnemonicParsing="false" onAction="#userClicksOnProductDeleteButton" prefHeight="27.0" prefWidth="125.0" text="Delete">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="exitButton" layoutX="902.0" layoutY="382.0" mnemonicParsing="false" onAction="#userClicksOnExitButton" prefHeight="26.0" prefWidth="125.0" text="Exit">
+         <font>
+            <Font name="Copperplate" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
